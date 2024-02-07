@@ -24,7 +24,6 @@ public class NegativeLoginTestStepDef {
                 System.out.println("page is refreshed because of pop-up");
             }
         }
-
     }
 
     @When("user types {string} into input box and {string}")
@@ -37,7 +36,6 @@ public class NegativeLoginTestStepDef {
        }
        else{
            loginPage.submitButton.click();
-
        }
     }
 
