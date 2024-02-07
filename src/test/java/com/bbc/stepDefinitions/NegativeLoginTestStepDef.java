@@ -37,6 +37,7 @@ public class NegativeLoginTestStepDef {
        }
        else{
            loginPage.submitButton.click();
+
        }
     }
 
