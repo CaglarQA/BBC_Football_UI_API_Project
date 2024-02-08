@@ -20,6 +20,10 @@ public class NegativeLoginTestStepDef {
                 loginPage.sigInButton.click();
                 break;
             }catch (RuntimeException e){
+                if(!Driver.getDriver().getTitle().contains("Homepage")) {
+                    Driver.getDriver().navigate().refresh();
+                    break;
+                }
                 Driver.getDriver().navigate().refresh();
                 System.out.println("page is refreshed because of pop-up");
             }
@@ -38,7 +42,6 @@ public class NegativeLoginTestStepDef {
            loginPage.submitButton.click();
        }
     }
-
     @Then("user should see {string}")
     public void user_should_see(String expectErrorMsg) {
         String actualErrorMsg = loginPage.errorMsg.getText();

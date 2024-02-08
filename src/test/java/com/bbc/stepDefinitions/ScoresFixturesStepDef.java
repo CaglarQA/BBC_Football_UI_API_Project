@@ -12,7 +12,7 @@ public class ScoresFixturesStepDef {
     ScoreFixturesPage scoreFixturesPage = new ScoreFixturesPage();
 
     @Given("user lands on {string} page")
-    public void user_lands_on_page(String title) {
+    public void user_lands_on_page(String title) throws InterruptedException {
         String goToUrl= ConfigurationReader.getProperty(title);
         Driver.getDriver().get(goToUrl);
         Assert.assertTrue(Driver.getDriver().getTitle().contains(title));
