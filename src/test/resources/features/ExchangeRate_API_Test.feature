@@ -1,4 +1,4 @@
-@api
+@test
 Feature:Do the following on the site whose URL is given
 
   Background: Take Response
