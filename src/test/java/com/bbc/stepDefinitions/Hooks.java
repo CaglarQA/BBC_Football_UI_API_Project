@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before
     public void before(){
-
+        System.out.println("-----------------Before--------------");
     }
 
     @After

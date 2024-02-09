@@ -17,6 +17,7 @@ public class ExchangeRate_API_StepDef {
 
     @Given("Get the Response by making an API query")
     public void get_the_response_by_making_an_apı_query() {
+        System.out.println("-------------ExchaneRate--------------");
         String url = "https://v6.exchangerate-api.com/v6/1fc80820c72b0163bc9c7536/latest/USD";
         response = given()
                 .accept(ContentType.JSON)
